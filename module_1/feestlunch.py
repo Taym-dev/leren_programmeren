@@ -4,10 +4,10 @@ STOKBROOD = 2.78
 
 KORTINGSBON = 0.50
 
-CROISSANTJES_TOTAAL =  17 * CROISSANTJES
-STOKBROOD_TOTAAL = 2 * STOKBROOD
-KORTINGSBON_TOTAAL = 3 * KORTINGSBON
+croissantjes_totaal =  17 * CROISSANTJES
+stokbrood_totaal = 2 * STOKBROOD
+kortingsbon_totaal = 3 * KORTINGSBON
 
-totaal = CROISSANTJES_TOTAAL + STOKBROOD_TOTAAL - KORTINGSBON_TOTAAL
+totaal = croissantjes_totaal + stokbrood_totaal - kortingsbon_totaal
 
 print (totaal)
