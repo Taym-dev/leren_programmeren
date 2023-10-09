@@ -6,12 +6,17 @@
     <link rel="stylesheet" href="styles.css">
     <title>Café-Bar Bestelling</title>
 </head>
+
 <body>
     <h1>Café-Bar Bestelling</h1>
     <div id="bestelling-form">
         <label for="bestelling">Welke bestelling wilt u toevoegen?</label>
-        <input type="text" id="bestelling" placeholder="fris/bier/wijn/snack/stop">
+        <input type="text" id="bestelling" placeholder="fris/bier/wijn">
         <button onclick="voegBestellingToe()">Voeg toe</button>
+        
+        <button id="nieuweBestelling" onclick="nieuweBestelling()">Nieuwe Bestelling</button>
+
+
     </div>
     <div id="rekening">
         <h2>Rekening</h2>
@@ -19,5 +24,6 @@
         <p id="totaalbedrag">Totaal: €0.00</p>
     </div>
     <script src="script.js"></script>
+
 </body>
 </html>

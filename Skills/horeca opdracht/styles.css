@@ -72,3 +72,30 @@ li {
     font-size: 18px;
     margin-top: 10px;
 }
+#restart {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#restart:hover {
+    background-color: #555;
+}
+
+#nieuweBestelling {
+    padding: 10px 20px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#nieuweBestelling:hover {
+    background-color: #555;
+}

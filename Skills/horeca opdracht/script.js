@@ -47,42 +47,40 @@ function voegBestellingToe() {
 
 
 
+function voegBestellingToe() {
+    const bestellingInput = document.getElementById('bestelling');
+    const bestelling = bestellingInput.value.trim().toLowerCase();
 
-function voegSnackToe() {
-    const snack = prompt('Welke snack wilt u bestellen? (frikandel/bitterballen/pizza)').toLowerCase();
+    if (bestelling === 'stop') {
+        toonRekening();
+        return; // Voeg een return toe om de functie te verlaten wanneer "stop" wordt ingevoerd.
+    }
 
-    if (snack === 'bitterballen') {
-        const aantalSchaal = parseInt(prompt('Hoeveel bitterballenschaal wilt u bestellen? (8 of 16)'));
-        if (aantalSchaal === 8 || aantalSchaal === 16) {
-            const aantalSchalen = parseInt(prompt(`Hoeveel bitterbalschalen van ${aantalSchaal} stuks wilt u bestellen?`));
-            if (!isNaN(aantalSchalen)) {
-                const item = `bitterballen_${aantalSchaal}`;
-                if (item in bestellingen['snacks']) {
-                    bestellingen['snacks'][item] += aantalSchalen;
+    if (bestelling in prijzen) {
+        const isSnack = ['frikandel', 'bitterballen', 'pizza'].includes(bestelling);
+        if (isSnack) {
+            voegSnackToe(bestelling);
+        } else {
+            const aantal = parseInt(prompt(`Hoeveel ${bestelling} wilt u toevoegen aan uw bestelling?`));
+            if (!isNaN(aantal)) {
+                if (bestelling in bestellingen['drankjes']) {
+                    bestellingen['drankjes'][bestelling] += aantal;
                 } else {
-                    bestellingen['snacks'][item] = aantalSchalen;
+                    bestellingen['drankjes'][bestelling] = aantal;
                 }
+                toonRekening();
             } else {
                 alert('Ongeldige invoer. Voer een geldig aantal in.');
             }
-        } else {
-            alert('U kunt alleen kiezen tussen 8 en 16 bitterballen.');
-        }
-    } else if (snack in prijzen) {
-        const aantal = parseInt(prompt(`Hoeveel ${snack} wilt u toevoegen aan uw bestelling?`));
-        if (!isNaN(aantal)) {
-            if (snack in bestellingen['snacks']) {
-                bestellingen['snacks'][snack] += aantal;
-            } else {
-                bestellingen['snacks'][snack] = aantal;
-            }
-        } else {
-            alert('Ongeldige invoer. Voer een geldig aantal in.');
         }
     } else {
         alert('Sorry, dat hebben we niet. Probeer opnieuw.');
     }
+
+    bestellingInput.value = '';
 }
+
+
 
 function toonRekening() {
     const rekeningLijst = document.getElementById('rekening-lijst');
@@ -105,3 +103,27 @@ function toonRekening() {
     const totaalbedragElement = document.getElementById('totaalbedrag');
     totaalbedragElement.innerText = `Totaal: €${totaalbedrag.toFixed(2)}`;
 }
+
+function wisBerekening() {
+    // Wis de weergegeven rekening en het totaalbedrag
+    const rekeningLijst = document.getElementById('rekening-lijst');
+    rekeningLijst.innerHTML = '';
+    const totaalbedragElement = document.getElementById('totaalbedrag');
+    totaalbedragElement.innerText = '';
+}
+
+function restartBerekening() {
+    // Reset alle bestellingen naar een lege staat
+    bestellingen = {
+        drankjes: {}
+    };
+
+    // Wis het bestelling-inputveld
+    const bestellingInput = document.getElementById('bestelling');
+    bestellingInput.value = '';
+
+    // Wis de weergegeven berekening
+    wisBerekening();
+}
+
+
