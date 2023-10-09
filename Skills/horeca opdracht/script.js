@@ -8,7 +8,7 @@ const prijzen = {
     'pizza': 8.00,
 };
 
-const bestellingen = {
+let bestellingen = {
     'drankjes': {},
     'snacks': {}
 };
@@ -127,3 +127,11 @@ function restartBerekening() {
 }
 
 
+function nieuweBestelling() {
+    // Reset het bestelling-inputveld
+    const bestellingInput = document.getElementById('bestelling');
+    bestellingInput.value = '';
+
+    // Wis de weergegeven rekening
+    wisBerekening();
+}
