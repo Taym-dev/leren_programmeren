@@ -1,16 +1,16 @@
-cijfer_1 = int(input('print wat is je cijfer 1: '))
-cijfer_2 = int(input('print wat is je cijfer 2: '))
+a = int(input("Voer het eerste gehele getal voor (a) in: "))
+b = int(input("Voer het tweede gehele getal voor (b) in: "))
 
-
-
-if cijfer_1 > cijfer_2:
-   Max = cijfer_1
-   print(f'cijfer 1 is een grotere getal dan 2 {Max}')
-
-
-elif cijfer_1 < cijfer_2:
-   Min = cijfer_1
-   print(f'1 is het kleinste getal: {Min}')
-    
+if a > b:
+    Max = a
+    Min = b
+    print(f'a is het grootste getal: {Max}')
+elif a < b:
+    Max = b
+    Min = a
+    print(f'b is het grootste getal: {Max}')
 else:
-   print('a en b zijn even groot')
+    print('a en b zijn even groot')
+
+print(f'Het minimum is: {Min}')
+print(f'Het maximum is: {Max}')
