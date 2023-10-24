@@ -13,7 +13,11 @@ if gele_kaas == 'nee' :
         korst1 = input('Heeft de kaas korst')
 
         if korst1 =='ja':
-            print('Het is camembert')
+            kaas_stinkt = input ('stinkt de kaas? ') 
+            if kaas_stinkt == 'ja' :
+                    print('Het is camembert')
+            elif kaas_stinkt == 'nee':
+                    print ('Het is brie')
         if korst1 == 'nee':
             print('het is Mozzarella')
 

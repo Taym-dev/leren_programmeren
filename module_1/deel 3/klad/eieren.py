@@ -16,10 +16,3 @@ if resterende_eieren > 0:
 
 print(f"Je hebt {aantal_dozen_12} van 12 en {aantal_dozen_6} van 6 nodig om {aantal_eieren} eieren in te pakken.")
 
-
-x = 10
-y = 5
-if x > y:
-    print("A")
-if x < y:
-    print("B")
