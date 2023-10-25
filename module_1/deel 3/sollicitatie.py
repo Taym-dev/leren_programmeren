@@ -3,7 +3,7 @@ MAX_GEWICHT = 120
 
 MIN_LENGTE = 150
 MAX_LENGTE = 220
-ANTWOORDEN = ('ja', 'Ja', 'JA', "j")
+#ANTWOORDEN = ('ja', 'Ja', 'JA', "j")
 
 
 solliciteren_baan = input('Je kunt solliciteren voor de volgende banen. Kies uit de volgende vacatures: circus ')
