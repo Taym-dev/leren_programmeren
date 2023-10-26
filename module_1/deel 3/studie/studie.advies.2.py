@@ -45,3 +45,8 @@ elif avgScore <= 3 or (getAnswerCount(2) >= (len(scores) / 2)):
 	print(COMPETENTIE_ADVIES_TWIJFELACHTIG)
 else:
 	print(COMPETENTIE_ADVIES_GERUSTSTELLEND)
+
+
+
+
+	
