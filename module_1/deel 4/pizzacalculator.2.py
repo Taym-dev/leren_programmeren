@@ -13,25 +13,25 @@ try:
 except:
     print('graag een getal invullen !')
 
+else:
+
+    pizzasklant_grote = input('Kies de grote van je pizza (groot) (normaal) (klein): ').lower()
+
+    if pizzasklant_grote not in PIZZA_FORMAAT_LIJST:
+        print('voer een formaat in')
 
 
-pizzasklant_grote = input('Kies de grote van je pizza (groot) (normaal) (klein): ').lower()
-
-if pizzasklant_grote not in PIZZA_FORMAAT_LIJST:
-    print('voer een formaat in')
-
-
-totaal_prijs_groot = pizzasklant_hoeveelheid * PIZZA_FORMAAT_GROOT
-totaal_prijs_normaal = pizzasklant_hoeveelheid * PIZZA_FORMAAT_NORMAAL
-totaal_prijs_klein = pizzasklant_hoeveelheid * PIZZA_FORMAAT_KLEIN
+    totaal_prijs_groot = pizzasklant_hoeveelheid * PIZZA_FORMAAT_GROOT
+    totaal_prijs_normaal = pizzasklant_hoeveelheid * PIZZA_FORMAAT_NORMAAL
+    totaal_prijs_klein = pizzasklant_hoeveelheid * PIZZA_FORMAAT_KLEIN
 
 
-if pizzasklant_grote == 'groot' or 'Groot':
-    print (f"Je hebt {pizzasklant_hoeveelheid} grote Pizza's van {PIZZA_FORMAAT_GROOT_FORMAAT} in totaal kost het {totaal_prijs_groot}  ")
+    if pizzasklant_grote in ('groot','Groot'):
+        print (f"Je hebt {pizzasklant_hoeveelheid} grote Pizza's van {PIZZA_FORMAAT_GROOT_FORMAAT} in totaal kost het {totaal_prijs_groot}  ")
 
-elif pizzasklant_grote == 'normaal' or 'Normaal':
-    print (f"Je hebt {pizzasklant_hoeveelheid} grote Pizza's van {PIZZA_FORMAAT_NORMAAL_FORMAAT} in totaal kost het {totaal_prijs_groot}  ")
+    elif pizzasklant_grote in ('normaal','Normaal'):
+        print (f"Je hebt {pizzasklant_hoeveelheid} normaal Pizza's van {PIZZA_FORMAAT_NORMAAL_FORMAAT} in totaal kost het {totaal_prijs_groot}  ")
 
-elif pizzasklant_grote == 'klein' or 'Kleiner':
-    print (f"Je hebt {pizzasklant_hoeveelheid} grote Pizza's van {PIZZA_FORMAAT_KLEIN_FORMAAT} in totaal kost het {totaal_prijs_groot}  ")
+    elif pizzasklant_grote in ('klein','Klein'):
+        print (f"Je hebt {pizzasklant_hoeveelheid} klein Pizza's van {PIZZA_FORMAAT_KLEIN_FORMAAT} in totaal kost het {totaal_prijs_groot}  ")
 

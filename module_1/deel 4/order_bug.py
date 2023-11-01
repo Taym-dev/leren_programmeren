@@ -4,7 +4,7 @@ def vraag_getal(aantal):
     return getal
 
 def deel_getallen(a, b):
-    antwoord = print(a / b)
+    antwoord = a / b
     return antwoord
 
 getal_2 = vraag_getal("tweede")
