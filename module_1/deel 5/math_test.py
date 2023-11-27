@@ -1,5 +1,5 @@
 from math_operations import increment, decrement, add, substract, multiply, divide
-from test_lib import test, report
+from math.test_lib import test, report
 
 nr1 = 3.0
 nr2 = 17.0

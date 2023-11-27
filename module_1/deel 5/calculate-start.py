@@ -31,4 +31,4 @@ result1 = nr1 + nr2 + nr3
 result2 = add(nr1 + nr2 + nr3)
 test('expression-4',result1, result2)
 
-report()
+report
