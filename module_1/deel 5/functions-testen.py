@@ -41,15 +41,5 @@ expected = 16
 calculated = ceil(nr) # use one function to calculate expected number
 test('sky-is-the-limit', expected, calculated)
 
-nr = -27.347
-expected = 27.35 
-calculated = round(abs(nr),2)
-test('cjv6', expected, calculated)
-
-nr = 16.92
-expected = -16 
-expected_omgerekent = abs(expected)
-calculated =
-test('cjv6.1', expected, calculated)
-
 report()
+

@@ -16,5 +16,5 @@ totaal_bedrag = totaal_oliebol = totaal_appelflap
 
 
 print(f'Totaal{totaal_oliebol/ 100}')
-#print(f'Totaal{totaal_appelflap/ 100}')
-#print(f'Totaal{totaal_bedrag/ 100}')
+print(f'Totaal{totaal_appelflap/ 100}')
+print(f'Totaal{totaal_bedrag/ 100}')
