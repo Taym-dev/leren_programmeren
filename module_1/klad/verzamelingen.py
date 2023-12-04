@@ -20,7 +20,7 @@
 
 mijn_lijst = []
 
-for _ in range(2):
+for _ in range(5):
     autos_info = {}  
     autos_info['Merk'] = input('Wat is de merk van uw auto: ')
     autos_info['Prijs'] = int(input('Wat is de prijs van uw auto: '))
