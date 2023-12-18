@@ -25,3 +25,4 @@ name = f'test price: {price} brand: {brand}'
 test(name, expect_content, calculated_content)
  
 report()
+

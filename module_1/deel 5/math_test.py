@@ -1,5 +1,5 @@
 from math_operations import increment, decrement, add, substract, multiply, divide
-from math.test_lib import test, report
+from test_lib import test, report
 
 nr1 = 3.0
 nr2 = 17.0
@@ -33,5 +33,3 @@ calculated = divide(nr1, 0)
 test('divide by zero', expected, calculated)
 
 report()
-
-
