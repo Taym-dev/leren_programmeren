@@ -12,12 +12,47 @@ naam_streepjes_spel = '''
 
 print(naam_streepjes_spel)
 
+
+def merging():
+    action = input('Wil je de schatkist zoeken!').lower()
+    if action == 'ja':
+        action = input('Waar wil je gaan zoeken op het strand of in het bos!').lower()
+        if action == 'bos':
+            print('In het wilde')
+            sleep(0.2)
+            print('Het bos waar mensen verwijderen')
+            sleep(0.2)
+            print('Je hebt twee boomstammen gevonden, Je maakt nu die boomstammen aan elkaar en gaat het water op ')
+            sleep(0.5)
+            print('Gefeliciteerd , Mensen hebben je gezien op het water Je hebt het overleefd')
+        elif action == 'strand' or action == 'strand':
+            print("Op het strand vind je een aangestrande boot die kapot is")
+            sleep(0.3)
+            print('Om de boot te repareren kost het je 1 boomstam ')
+            sleep(0.3)
+            action = input('Wil je het bos in?')
+            if action == 'ja':
+                print('Je hebt twee boomstammen gevonden neem er eentje mee!')
+                sleep(0.2)
+                print('repareer je boot nu')
+                sleep(2)
+                print('je boot is af, Je gaat nu het water op')
+                sleep(0.3)
+                print('Gefeliciteerd je bent aangemeerd op een vissers eiland!')
+            else: 
+                print('Je hebt het niet gehaald en je verhongerd')
+                start()
+        
+        
+    else:
+         print("Je hebt het niet gehaald .")
+
 def start():
     print("Hoi dit is een adveture game")
-    print("je wordt wakker in een donkere kamer. er is links een deur en rechts ")
-    action = input("Wat doe je? ")
+    print("je wordt wakker in een donkere grot. er is links een gang en rechts een gang ")
+    action = input("Welke kant kies je ? ")
 
-    if action.lower() == "open links deur" or action.lower () =='open links' or action.lower () == 'linker ':
+    if action.lower() == "links" or action.lower () =='open links' or action.lower () == 'linker ':
         left_door()
     elif action.lower() == "open rechter deur" or action.lower () == 'rechts':
         right_door()
@@ -33,8 +68,8 @@ def left_door():
     if action.lower() == "ja":
         print("Oke je hebt een kaart")
         if action == 'ja':
-            action = input('Je bent naar buiten gegaan, Op je kaart staat er en gemarkeerde plek, Wil je daar heen of een hut maken?').lower()
-            if action == 'hut' or 'hut maken':
+            action = input('Je bent naar buiten gegaan, Op je kaart staat er en gemarkeerde plek, Wil je naar de gemarkeerde plek of een hut bouwen?').lower()
+            if action == 'hut' or action == 'hut maken':
                 print('je gaat een hut bouwen')
                 print('je bent begonnen met bouwen')
                 sleep(2)
@@ -60,33 +95,40 @@ def left_door():
                         sleep(2)
                         print('je hebt 500 meter gelopen')
                         sleep(2)
-                        print('je hebt 1 kilo gelopen')
+                        print('je hebt 1 kilometer gelopen')
                         sleep(2)
                         print('je hebt 1.5 kilometer gelopen')
                         sleep(2)
-                        print('je hebt 2 meter gelopen')
+                        print('je hebt 2 kilometer gelopen')
                         sleep(2)
                         print('je bent er ')
-                elif action == 'gemarkeerde plek':
-                    print('Het is nog 2 kilometer lopen')
-                    sleep(2)
-                    print('je hebt 500 meter gelopen')
-                    sleep(2)
-                    print('je hebt 1 kilo gelopen')
-                    sleep(2)
-                    print('je hebt 1.5 kilometer gelopen')
-                    sleep(2)
-                    print('je hebt 2 meter gelopen')
-                    sleep(2)
-                    print('je bent er, Je bent erg moe!! ')
+                        merging()
+            elif action == 'gemarkeerde plek' or action == 'gemarkeerdeplek':
+                print('Het is nog 2 kilometer lopen')
+                sleep(2)
+                print('je hebt 500 meter gelopen')
+                sleep(2)
+                print('je hebt 1 kilometer gelopen')
+                sleep(2)
+                print('je hebt 1.5 kilometer gelopen')
+                sleep(2)
+                print('je hebt 2 kilometer gelopen')
+                sleep(2)
+                print('je bent er, Je bent erg moe!! ')
 
-                    action = input('Wil je de schatkist zoeken of slapen op de grond?')
-                    if action == 'slapen':
-                        dagen = 0
-                        dagen += 1
-                        print(f'Dag nummer {dagen}')
-                        sleep(1)
-                        print(' je gaat nu zoeken naar de schatkist')
+                action = input('Wil je de schatkist zoeken of slapen op de grond?')
+                if action == 'slapen':
+                    dagen = 0
+                    dagen += 1
+                    print(f'Dag nummer {dagen}')
+                    sleep(1)
+                    print(' je gaat nu zoeken naar de schatkist')
+                    
+                    merging()
+                
+                else:
+                    print('Helaas je hebt het niet gehaald!')
+                    start()
                         
 
 
