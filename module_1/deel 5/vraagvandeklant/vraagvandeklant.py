@@ -42,30 +42,31 @@ def merging():
             else: 
                 print('Je hebt het niet gehaald en je verhongerd')
                 start()
-        
-        
+        else:
+            print("Foute input probeer je antwoord te veranderen! Probeer opnieuw.")
+            start()
+
     else:
-         print("Je hebt het niet gehaald .")
+        print("Je hebt het niet gehaald .")
 
 def start():
     print("Hoi dit is een adveture game")
     print("je wordt wakker in een donkere grot. er is links een gang en rechts een gang ")
-    action = input("Welke kant kies je ? ")
+    action = input("Welke kant kies je ? ").lower()
 
-    if action.lower() == "links" or action.lower () =='open links' or action.lower () == 'linker ':
+    if action == "links" or action =='open links' or action == 'linker ':
         left_door()
-    elif action.lower() == "open rechter deur" or action.lower () == 'rechts':
+    elif action == "open rechter deur" or action == 'rechts':
         right_door()
     else:
         print("Foute input probeer je antwoord te veranderen! Probeer opnieuw.")
-   
         start()
 
 def left_door():
     print("Je hebt een schatkist gevonden openen of niet?")
     action = input("ja of nee? ")
 
-    if action.lower() == "ja":
+    if action.lower() == "ja" and action != 'nee':
         print("Oke je hebt een kaart")
         if action == 'ja':
             action = input('Je bent naar buiten gegaan, Op je kaart staat er en gemarkeerde plek, Wil je naar de gemarkeerde plek of een hut bouwen?').lower()
@@ -84,8 +85,7 @@ def left_door():
                 print('je hebt je hut gebouwd')
                 action = input('Wil je slapen of naar de gemarkeerde plek op je map').lower()
 
-
-                if action == 'slapen' or 'slaap':
+                if action == 'slapen' or action == 'slaap':
                     dagen = 0
                     dagen += 1
                     print(f'Je bent op dag {dagen}')
@@ -103,7 +103,7 @@ def left_door():
                         sleep(2)
                         print('je bent er ')
                         merging()
-            elif action == 'gemarkeerde plek' or action == 'gemarkeerdeplek':
+            elif action == 'gemarkeerde plek' or action == 'gemarkeerdepleka':
                 print('Het is nog 2 kilometer lopen')
                 sleep(2)
                 print('je hebt 500 meter gelopen')
@@ -123,39 +123,23 @@ def left_door():
                     print(f'Dag nummer {dagen}')
                     sleep(1)
                     print(' je gaat nu zoeken naar de schatkist')
-                    
                     merging()
-                
                 else:
                     print('Helaas je hebt het niet gehaald!')
                     start()
-                        
-
-
-
-                
-                
-            
-
-            elif action.lower == 'ja' or 'jaa':
-                print('je zoekt naar de schat kist ')
-                
-
-            
             else:
                 print('Helaas je gaat het niet halen als je niks wilt doen')
 
-
-    elif action.lower() == "nee":
+    elif action.lower() == "nee" and action != 'ja':
         print("Je hebt de deur dicht gemaakt en je gaat naar huis.")
-        
+
     else:
         print("Foute input probeer je antwoord te veranderen! Probeer opnieuw.")
         left_door()
 
 def right_door():
     print("Je bent in een gas kamer ga snel weg!")
-    
+
     sleep(4)
     print ('je bent dood')
     print('-'* 173)
