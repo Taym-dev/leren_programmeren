@@ -73,14 +73,10 @@ def left_door():
             if action == 'hut' or action == 'hut maken':
                 print('je gaat een hut bouwen')
                 print('je bent begonnen met bouwen')
-                sleep(2)
-                print('je hebt 20 procent af')
-                sleep(2)
-                print('je hebt 40 procent af')
-                sleep(2)
-                print('je hebt 60 procent af')
-                sleep(2)
-                print('je hebt 80 procent af')
+                for af in (10,20,40,60,80):
+                    sleep(2)
+                    print(f'je hebt {af} procent af')
+                
                 sleep(3)
                 print('je hebt je hut gebouwd')
                 action = input('Wil je slapen of naar de gemarkeerde plek op je map').lower()
