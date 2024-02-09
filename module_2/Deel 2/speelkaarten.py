@@ -4,6 +4,7 @@ kleuren = ['harten', 'klaveren', 'schoppen', 'ruiten']
 waarden = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'boer', 'vrouw', 'heer', 'aas']
 deck = [(waarde, kleur) for kleur in kleuren for waarde in waarden] + [('joker', '1'), ('joker', '2')]
 
+#random.shuffle(deck)
 random.shuffle(deck)
 
 hand = deck[:7]
