@@ -7,4 +7,5 @@ for x in range(1, aantal_lijstjes + 1):
     lijst1 = list(range(x, x * lengte + 1, x))
     lijstjes.append(lijst1)
  
+#print(lijstjes)
 print(lijstjes)
