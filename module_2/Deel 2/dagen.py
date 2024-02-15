@@ -1,30 +1,28 @@
 WEEK_DAGEN = ('Maandag','Dinsdag','Woensdag','Donderdag','Vrijdag','Zaterdag','Zondag')
 
-WEEK_DAGEN_REVERSE = list(WEEK_DAGEN)
+zin_een = 'Alle dagen van de week zijn: '
 
-WEEK_DAGEN_REVERSE.reverse()
+zin_twee = "Alle werkdagen van de week zijn: "
 
-WERK_DAGEN = WEEK_DAGEN[0:5]
+zin_drie = "Alle weekend dagen zijn: "
 
-WERK_DAGEN_REVERSED = list(WERK_DAGEN)
+zin_vier = "De werkdagen in omgekeerde volgorde zijn:  "
 
-WERK_DAGEN_REVERSED.reverse()
+for dag in WEEK_DAGEN:
+    zin_een += dag + ', '
 
-VRIJE_DAGEN = WEEK_DAGEN[5:7]
 
-VRIJE_DAGEN_REVERSED = list(VRIJE_DAGEN)
+for dag in WEEK_DAGEN[:5]: 
+    zin_twee += dag +', '
 
-VRIJE_DAGEN_REVERSED.reverse()
-print(WEEK_DAGEN)
-print('--'* 5)
-print (WERK_DAGEN)
-print('--'* 5)
-print(VRIJE_DAGEN)
-print('--'* 5)
-print(WERK_DAGEN_REVERSED)
-print('--'* 5)
-print(WEEK_DAGEN_REVERSE)
-print('--'* 5)
-print(VRIJE_DAGEN_REVERSED)
+for dag in WEEK_DAGEN[5:7]: 
+    zin_drie += dag +', '
 
+for dag in WEEK_DAGEN[7::-1]: 
+    zin_vier += dag +', '
+
+print (zin_een)
+print(zin_twee)
+print(zin_drie)
+print(zin_vier)
 
