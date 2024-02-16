@@ -47,3 +47,8 @@ print(zin_vijf)
 print('\n')
 print(zin_zes)
 print('\n')
+
+
+fruit = ['appel','bannaan','peer','kers']
+fruittext = 'de fruitmant bevat ' + ','.join(fruit) + '.'
+print(fruittext)
