@@ -3,11 +3,11 @@ def lijst_generator():
 
     alle_lijsten = []
     for i in range(1, aantal_lijsten + 1):
-        lengte = int(input(f"hoeveel wil je in je lijstje {i}"))
+        lengte = int(input(f"hoeveel wil je in je lijstje {i}: "))
 
         lijsten_nu = []
         for j in range(1, lengte + 1):
-            lijsten_nu.append(i * j)
+            lijsten_nu.append(lengte)
 
         alle_lijsten.append(lijsten_nu)
 
