@@ -1,15 +1,9 @@
-teller = 0 
+tijd = 0
 
-while True:
-    teller += 1
-    if teller  <= 12:
-        print(f'am {teller}')
-    
-    elif teller >= 12:
-        print(f'pm {teller - 12}')
-    
-    if teller == 24:
-        break
+for _ in range(23):
+    tijd += 1
+    if  tijd <= 12:
+        print(f'am {tijd}')
+    if  tijd >= 12: 
 
-
-
+        print(f'pm {tijd - 11}')
