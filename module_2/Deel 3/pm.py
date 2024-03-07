@@ -1,9 +1,10 @@
 tijd = 0
 
-for _ in range(23):
+while True:
     tijd += 1
-    if  tijd <= 12:
-        print(f'am {tijd}')
-    if  tijd >= 12: 
-
-        print(f'pm {tijd - 11}')
+    if tijd == 24:
+        break 
+    if tijd <= 12:
+        print(f"am {tijd}")
+    elif tijd >= 12:
+        print(f"pm {tijd - 12}")

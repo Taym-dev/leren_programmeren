@@ -1,42 +1,25 @@
-def vertaal_tekst(tekst, vertaal_dict):
-    woorden = tekst.split()
-    vertaalde_tekst = []
+vertaal_dict = {
+    "hart": "ingang",
+    "grot": "teennagels",
+    "Draganthor": "geit",
+    "schubben": "waterende",
+    "vurige": "golf",
+    "ogen": "water",
+    "draak": "geit",
+    "brulde": "spuwde",
+    "spuwde": "golf",
+    "vlammenzee": "water",
+    "bedreigde": "bedreigde",
+    "Rurik": "Rurik",
+    "beschermde": "beschermde",
+    "krachtig": "krachtig",
+    "schild": "zwemvliezen",
+    "magie": "plastic"
+}
 
-    for woord in woorden:
-        if woord in vertaal_dict:
-            vertaalde_tekst.append(vertaal_dict[woord])
-        else:
-            vertaalde_tekst.append(woord)
+originele_tekst = input("voer je tekst in:  ")
+for key,waarde in vertaal_dict.items():
+    if key in originele_tekst:
+        originele_tekst = originele_tekst.replace(key,waarde)
 
-    return ' '.join(vertaalde_tekst)
-
-def main():
-    vertaling = {
-        'hart': 'ingang',
-        'grot': 'grot',
-        'Draganthor': 'Draganthor',
-        'glinsterende': 'glinsterende',
-        'schubben': 'teennagels',
-        'vurige': 'waterende',
-        'ogen': 'ogen',
-        'draak': 'geit',
-        'brulde': 'brulde',
-        'spuwde': 'spuwde',
-        'vlammenzee': 'golf',
-        'hen': 'hen',
-        'bedreigde': 'bedreigde',
-        'Rurik': 'Rurik',
-        'beschermde': 'beschermde',
-        'krachtig': 'krachtig',
-        'schild': 'zwemvliezen',
-        'magie': 'plastic'
-    }
-
-    input_tekst = input("Voer een stukje tekst in: ").lower()
-    vertaalde_tekst = vertaal_tekst(input_tekst, vertaling)
-
-    print("\nVertaalde tekst:")
-    print(vertaalde_tekst)
-
-if __name__ == "__main__":
-    main()
+print("Vertaalde tekst: " + originele_tekst)
