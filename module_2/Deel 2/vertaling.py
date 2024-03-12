@@ -23,3 +23,4 @@ for key,waarde in vertaal_dict.items():
         originele_tekst = originele_tekst.replace(key,waarde)
 
 print("Vertaalde tekst: " + originele_tekst)
+   
