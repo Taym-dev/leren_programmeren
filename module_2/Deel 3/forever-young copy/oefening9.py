@@ -2,25 +2,25 @@ from RobotArm import RobotArm
 
 robotArm = RobotArm('exercise 9')
 
-robotArm.grab()
-for _ in range (4):
+
+for stappen in range(1, 5):
+    for _ in range(stappen):
+        robotArm.grab()
+        for _ in range(5): 
+            robotArm.moveRight()
+        robotArm.drop()
+        for _ in range(5): 
+            robotArm.moveLeft()
+ 
     robotArm.moveRight()
-robotArm.drop()
-for _ in range (3):
-    robotArm.moveLeft()
-robotArm.grab()
-for _ in range(4):
-    robotArm.moveRight()
-robotArm.drop()
-for _ in range(4):
-    robotArm.moveLeft()
-robotArm.grab()
-for _ in range(4):
-    robotArm.moveRight()
-robotArm.drop()
 
 
 
+
+
+    
+    
+    
 
 
 robotArm.wait()
