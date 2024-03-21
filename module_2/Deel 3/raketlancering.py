@@ -1,12 +1,13 @@
 from time import sleep
 
-teller = 31
+teller = 30
 
-while True:
-    teller += -1 
-    sleep(1)
+while teller > 0:
     print(teller)
-    if teller == 0:
-        print('raket gelanceerd')
-        break
+    teller -= 1 
+    # sleep(1)
+
+
+print('raket gelanceerd')
+
 

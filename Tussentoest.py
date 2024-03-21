@@ -35,6 +35,7 @@ for totaal in lijst_getallen:
         intotaal += totaal 
 
 print(intotaal)
+
 # lijst_getallen.clear()
 # print(lijst_getallen)
 

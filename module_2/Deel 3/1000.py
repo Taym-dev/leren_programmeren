@@ -1,4 +1,4 @@
-total_sum = 0
+total_sum  = 0
 
 for current_number in range(50, 10000):
     total_sum += current_number
