@@ -12,8 +12,8 @@ while doorgaan.lower() != 'nee':
     
 
 print("Uw boodschappenlijst:")
-# for artikel, aantal in boodschappenlijst.items():
-#     print(f"{aantal}x {artikel}")
+for artikel, aantal in boodschappenlijst.items():
+    print(f"{aantal}x {artikel}")
 
 for key in boodschappenlijst:
     print(key,boodschappenlijst[key])
