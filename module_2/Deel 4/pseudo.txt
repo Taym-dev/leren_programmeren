@@ -1,0 +1,42 @@
+Importeer een random getal 
+
+het maximaal aantal speelrondes is 20
+speelrondes is 0 
+score van gebruiker is 0
+
+wanneer speelrondes kleiner is dan maximaal aantal speelrondes
+    hier print ik in de terminal dat je een getal tussen 1 en 1000 moet raden
+    hier definieer ik getal_random daar word een random getal ingedaan
+    aantal speelrondes in een ronde is 0
+
+    wanneer aan speelrondes in een ronde kleiner is dan 10 
+        gok_persoon_getal hier word gevraagd wat de persoon wilt gokken
+        aantal speelrondes is + 1
+
+        Als gok_persoon_getal is gelijk aan getal_random
+            score van gebruiker wordt omhoog met 1
+            hier print je je hebt het goed
+            hier print ik de score van gebruiker
+            hier maak ik een lege regel in de terminal
+            verder_raden hier vraag ik of hij nog een keer wilt
+            als verder_raden is niet gelijk aan ja
+                print je hier zijn eind score
+                en met de break stopt de while loop
+        anders aantal_speel_rondes_in_een_ronde is gelijk aan 10
+            print ik hier dit was je laatste poging deze ronde
+            print hier print ik het juiste getal
+            print hier print ik de score van de gebruiker
+            de break zorgt hiervoor dat ik uit de while loop kom
+        anders:
+            verschil = omhoog ronden gok_persoon_getal min de  getal_random
+            als verschil kleiner is dan 20
+                print je bent heel warm
+            als verschil kleiner is dan 50 
+                print je bent warm
+            als gok_persoon_getal kleiner getal_random
+                print hoger
+            als gok_persoon_getal groter getal_random
+                print lager
+speelrondes is plus 1
+
+    
