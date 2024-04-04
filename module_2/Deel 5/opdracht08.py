@@ -1,8 +1,19 @@
 from fruitmand import fruitmand
 
-fruitmand = [fruit for fruit in fruitmand if fruit['name'] != 'druif']
+totaal_gewicht = 0
+for fruit in fruitmand:
+    totaal_gewicht += fruit['weight']
+print(totaal_gewicht)
 
-kleuren = set(fruit['color'] for fruit in fruitmand)
+watermeloen = {
+    'name': 'watermeloen',
+    'weight': 3000,  
+    'color': 'green',
+    'round': True
+}
+fruitmand.append(watermeloen)
 
-for kleur in kleuren:
-    print(kleur)
+totaal_gewicht_met_watermeloen = 0
+for fruit in fruitmand:
+    totaal_gewicht_met_watermeloen += fruit['weight']
+print(totaal_gewicht_met_watermeloen)
