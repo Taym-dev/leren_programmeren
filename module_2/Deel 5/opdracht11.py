@@ -1,8 +1,15 @@
 from fruitmand import fruitmand
 
+kleuren_keuze = []
+
+for fruit in fruitmand:
+    if fruit['color'] not in kleuren_keuze:
+        kleuren_keuze.append(fruit['color'])
+
+print(kleuren_keuze)
+
 while True:
-    kleuren_keuze = ('yellow', 'green', 'orange', 'red', 'brown')
-    kleur_gebruiken_input = input('Welke kleur kies jij uit (yellow, green, orange, red, brown): ')
+    kleur_gebruiken_input = input(f'Welke kleur kies jij uit: {kleuren_keuze} ')
     if kleur_gebruiken_input not in kleuren_keuze:
         print(f'{kleur_gebruiken_input} is geen geldige keuze')
         continue
