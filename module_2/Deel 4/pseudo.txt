@@ -29,14 +29,15 @@ wanneer speelrondes kleiner is dan maximaal aantal speelrondes
             de break zorgt hiervoor dat ik uit de while loop kom
         anders:
             verschil = omhoog ronden gok_persoon_getal min de  getal_random
+            als gok_persoon_getal kleiner getal_random
+                print hoger
+            anders
+                print lager
             als verschil kleiner is dan 20
                 print je bent heel warm
             als verschil kleiner is dan 50 
                 print je bent warm
-            als gok_persoon_getal kleiner getal_random
-                print hoger
-            als gok_persoon_getal groter getal_random
-                print lager
+
 speelrondes is plus 1
 
     
