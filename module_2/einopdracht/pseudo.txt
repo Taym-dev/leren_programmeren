@@ -1,0 +1,10 @@
+hier importeer ik random 
+
+wanneer true
+    naamen_personen is input wat zijn jullie namen
+    als naamen_personen is minder dan 3 
+        print("je moet minimaal 3 personen invoeren")
+        continue
+    optie_lootje_namen is input wil je verder gaan naar namen of lootjes
+    als optie_lootje_namen is gelijk aan namen
+     continue
