@@ -7,7 +7,7 @@ for fruit in fruitmand:
     if fruit['name'] == 'druif':
         fruitmand.remove(fruit) 
 
-kleuren = {}
+kleuren = []
 
 for fruit in fruitmand:
     if fruit['color'] not in kleuren:
