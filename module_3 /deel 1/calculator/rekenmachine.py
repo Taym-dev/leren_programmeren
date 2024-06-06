@@ -8,7 +8,6 @@ print("E) getallen ophogen")
 print("F) getallen verlagen")
 print("G) getallen verdubbelen")
 print("H) getallen halveren")
-print('I) u verlaat het programma')
 print('\n')
 
 while True:
@@ -76,13 +75,7 @@ while True:
 
     elif choice == 'h':
         n1 = float(input('Uw eerste getal: '))
-        n2 = input('Uw tweede getal (druk op Enter als u :2 wilt gebruiken): ')
-        
-        if n2.strip() == '':
-            n2 = 2
-        else:
-            n2 = float(n2)
-            
+        n2 = 2            
         result = n1 / n2
         print(f'uw antwoord is: {n1} : {n2} = {result}')
 

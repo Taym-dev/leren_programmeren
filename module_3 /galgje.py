@@ -1,6 +1,6 @@
 import random
 
-woordenlijst = ['oooo']
+woordenlijst = ['python', 'programmeren', 'galgje', 'spel', 'computer']
 woord = random.choice(woordenlijst)
 geraden_woord = ['_'] * len(woord)
 geraden_letters = set()

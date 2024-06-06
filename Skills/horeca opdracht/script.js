@@ -4,7 +4,7 @@ const prijzen = {
     'wijn': 4.00,
     'frikandel': 2.00,
     'bitterballen_8': 5.00,
-    'bitterballen_16': 9.00,
+    'bitterballen_16': 19.00,
     'pizza': 8.00,
 };
 
@@ -105,7 +105,6 @@ function toonRekening() {
 }
 
 function wisBerekening() {
-    // Wis de weergegeven rekening en het totaalbedrag
     const rekeningLijst = document.getElementById('rekening-lijst');
     rekeningLijst.innerHTML = '';
     const totaalbedragElement = document.getElementById('totaalbedrag');
@@ -113,7 +112,6 @@ function wisBerekening() {
 }
 
 function restartBerekening() {
-    // Reset alle bestellingen naar een lege staat
     bestellingen = {
         drankjes: {}
     };

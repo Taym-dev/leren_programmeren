@@ -12,7 +12,7 @@ def verzamel_gegevens():
 def print_resultaat(gebruikers_info):
     print("\nResultaat:")
     for info in gebruikers_info:
-        print(f"In {info['city']} woont de {info['age']} jarige {info['name']}")
+        print(info['name'], 'is', info['age'], 'jaar oud en woont in', info['city'])
 
 #info['city']       info['name']     info['age']
         
